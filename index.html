@@ -1,0 +1,521 @@
+
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOS - Thái Nguyên</title>
+   <!-- Xin Chào Em Là Nguyễn Ngọc Hiệp -->
+   <!-- Email: nguyenngochiep06022005@gmail.com -->
+    <meta property="og:type" content="website">
+
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+        <style>
+       body {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+        
+        .container {
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .btn-primary:hover,
+        .btn-secondary:hover {
+            opacity: 0.9;
+        }
+
+        .nav-tabs {
+            border-bottom: 2px solid #007bff;
+            border-radius: 8px;
+        }
+
+        .nav-item {
+            margin-bottom: -1px;
+        }
+
+        .nav-link {
+            border: 1px solid #007bff;
+            border-radius: 8px 8px 0 0;
+            padding: 10px 20px;
+            background-color: #212529;
+            color: #e0e0e0;
+            font-weight: 500;
+            text-align: center;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+        }
+
+        .nav-link.active {
+            background-color: #007bff;
+            color: #ffffff;
+            border-color: #007bff;
+        }
+
+        .nav-link:hover {
+            background-color: #495057;
+            color: #ffffff;
+        }
+
+        #myTabContent {
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        h3 {
+            font-size: 1.6em;
+            color: #ffffff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        ul li, ol li {
+            background-color: #2c2c2c;
+            border: 1px solid #444;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            padding: 10px;
+            line-height: 1.6;
+            color: #e0e0e0;
+            font-size: 1em;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            list-style-type:none;
+        }
+
+        ul li:hover, ol li:hover {
+            background-color: #333;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+
+        p {
+            margin: 10px 0;
+            background-color: #2c2c2c;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 10px;
+            line-height: 1.6;
+            color: #e0e0e0;
+            font-size: 1em;
+        }
+
+        .info-box {
+            background-color: #2c2c2c;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .info-box h4 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            color: #ffffff;
+        }
+
+        .alert {
+            background-color: #444;
+            color: #e0e0e0;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-weight: 500;
+            border: 1px solid #555;
+        }
+
+        .phone-number {
+            font-weight: 600;
+            color: #007bff;
+        }
+        
+        .btn-sm {
+            font-size: 0.875rem;
+            padding: 0.25rem 0.5rem;
+        }
+        /* Tổng thể */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+/* Tabs */
+.nav-tabs {
+    border-bottom: 2px solid #007bff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item {
+    margin-bottom: -1px;
+}
+
+.nav-link {
+    border: 1px solid #007bff;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 20px;
+    background-color: #212529;
+    color: #e0e0e0;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.nav-link.active {
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+.nav-link:hover {
+    background-color: #495057;
+    color: #ffffff;
+}
+
+/* Nội dung tab */
+.tab-content {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.show {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: #ffffff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    font-size: 1em;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+ul li:hover, ol li:hover {
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+          </style>
+          
+</head>
+
+<body class="py-5">
+    <main class="container">
+        <div class="row">
+            <div class="col">
+                <h1>🔴 SOS - Thái Nguyên</h1>
+
+               
+               
+
+                <ul class="nav nav-tabs mt-3" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="thainguyen-tab" data-bs-toggle="tab"
+                            data-bs-target="#thainguyen-tab-pane" type="button" role="tab"
+                            aria-controls="thainguyen-tab-pane" aria-selected="true">Thông Tin Cứu Hộ Tỉnh Thái Nguyên</button>
+                    </li>
+                   
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="donate-tab" data-bs-toggle="tab" data-bs-target="#donate-tab-pane"
+                            type="button" role="tab" aria-controls="donate-tab-pane" aria-selected="false">Ủng hộ khuyên góp đồng
+                            bào</button>
+                    </li>
+                </ul>
+                <div class="tab-content pt-3" id="myTabContent">
+                    <div class="tab-pane fade show active" id="thainguyen-tab-pane" role="tabpanel"
+                        aria-labelledby="thainguyen-tab" tabindex="0">
+
+                        <h3>UPDATE liên tục số cứu hộ</h3>
+                        <ul>
+                            <li>Anh Cương: <a href="tel:0815939555">0815 939 555</a></li>
+                            <li>Anh Chính: <a href="tel:0976140634">0976 140 634</a></li>
+                            <li>Anh Huy: <a href="tel:0386999226">0386 999 226</a></li>
+                            <li>Anh Hiệp: <a href="tel:0862262742">0862 262 742</a></li>
+                            <li>Anh Doanh: <a href="tel:0384991886">0384 991 886</a></li>
+                            <li>Anh Quan: <a href="tel:0941108222">0941 108 222</a></li>
+                            <li>Anh Tân: <a href="tel:0988926220">0988 926 220</a>, <a href="tel:0339159597">0339 159
+                                    597</a></li>
+                            <li>Nhà tàu Hà Duy hồ Núi Cốc: <a href="tel:0989929257">0989 929 257</a>, <a
+                                    href="tel:0374485888">0374 485 888</a>, <a href="tel:0989929257">0989 929 257</a>,
+                                <a href="tel:0973565118">0973 565 118</a>, <a href="tel:0972955048">0972 955 048</a>
+                            </li>
+                            <li>Cứu hộ: <a href="tel:0961396296">0961 396 296</a>, <a href="tel:0981883922">0981 883
+                                    922</a></li>
+                            <li>Cứu hộ: <a href="tel:0398320839">0398 320 839</a></li>
+                            <li>Cứu hộ Hiền hồ Núi Cốc: <a href="tel:0989929257">0989 929 257</a>, <a
+                                    href="tel:0961396296">0961 396 296</a>, <a href="tel:0981883922">0981 883 922</a>
+                            </li>
+                            <li>5 thuyền nhỏ ở phường Quang Vinh: <a href="tel:0339159597">0339 159 597</a>, <a
+                                    href="tel:0988926220">0988 926 220</a>, <a href="tel:0982884530">0982 884 530</a>
+                            </li>
+                            <li>6 thuyền và 12 áo phao (thời điểm update đang ở TP Thái Nguyên): <a
+                                    href="tel:0917632820">0917 632 820</a></li>
+                            <li>Đội cứu hộ thanh niên chữ thập đỏ (thời điểm update đang ở Quang Vinh): <a
+                                    href="tel:0976140634">0976 140 634</a></li>
+                            <li>Khu vực TP Thái Nguyên: <a href="tel:0981122999">0981 122 999</a>, <a
+                                    href="tel:0971272343">0971 272 343</a></li>
+                            <li>Khu vực Đồng Bẩm: <a href="tel:0376948223">0376 948 223</a></li>
+                            <li>Sub cứu hộ: <a href="tel:0971448112">0971 448 112</a></li>
+                            <li>CA TP: <a href="tel:0973663890">0973 663 890</a></li>
+                            <li>Cứu hộ: <a href="tel:0985352789">0985 352 789</a></li>
+                            <li>Cứu hộ: <a href="tel:0978891822">0978 891 822</a></li>
+                            <li>Hải Đỏ (khu vực Phổ Yên): <a href="tel:0855889999">0855 889 999</a></li>
+                            <li>Sơn (khu vực TP Thái Nguyên): <a href="tel:0913384267">0913 384 267</a></li>
+                            <li>Hùng: <a href="tel:0913344919">0913 344 919</a></li>
+                            <li>Bắc: <a href="tel:0983352444">0983 352 444</a></li>
+                            <li>Khu vực đài truyền hình tỉnh: <a href="tel:0974236991">0974 236 991</a></li>
+                            <li>My (2 thuyền): <a href="tel:0962368977">0962 368 977</a></li>
+                            <li>Tân: <a href="tel:0982495459">0982 495 459</a></li>
+                            <li>Cứu hộ: <a href="tel:0398320839">0398 320 839</a></li>
+                            <li>Đức Anh: <a href="tel:0344829111">0344 829 111</a></li>
+                            <li>Cứu hộ khu Dương Tự Minh, Quan Triều: <a href="tel:0357595158">0357 595 158</a></li>
+                            <li>Sub khu vực TP Thái Nguyên: <a href="tel:0398585333">0398 585 333</a></li>
+                            <li>Ngọc Mão: <a href="tel:0976708114">0976 708 114</a></li>
+                            <li>Quyên (cano): <a href="tel:0325369866">0325 369 866</a></li>
+                            <li>Ngọc: <a href="tel:0963898222">0963 898 222</a></li>
+                            <li>Linh: <a href="tel:0395141888">0395 141 888</a></li>
+                            <li>Tuấn: <a href="tel:0376366385">0376366385</a></li>
+                            <li>Đoàn Vạn Thọ Đại Từ (thời điểm update đang di chuyển xuôi TP Thái Nguyên): <a
+                                    href="tel:0567654999">0567 654 999</a>, <a href="tel:0987838676">0987 838 676</a>,
+                                <a href="tel:0978891822">0978 891 822</a>
+                            </li>
+                            <li>Dương: <a href="tel:0962936236">0962 936 236</a></li>
+                            <li>Thức: <a href="tel:0965024990">0965 024 990</a></li>
+                            <li>Long (4 thuyền): <a href="tel:0359796659">0359 796 659</a></li>
+                            <li>Cứu hộ cano: <a href="tel:0961396296">0961 396 296</a>, <a href="tel:0981883922">0981
+                                    883 922</a></li>
+                            <li>Nắng Media: <a href="tel:0963898222">0963 898 222</a>, <a href="tel:0395141888">0395 141
+                                    888</a></li>
+                            <li>Thắng (thời điểm update đang ở khu vực Quang Vinh): <a href="tel:0386827522">0386 827
+                                    522</a></li>
+                            <li>Tuấn: <a href="tel:0916195222">0916 195 222</a>, <a href="tel:0915554886">0915 554
+                                    886</a></li>
+                            <li>Cứu hộ khu vực Danko và Quang Vinh: <a href="tel:0977633551">0977 633 551</a></li>
+                            <li>Khu vực Cầu Mỏ Bạch: <a href="tel:0345508991">0345 508 991</a></li>
+                            <li>Hà CLB Cano Thai Nguyen: <a href="tel:0334288668">0334 288 668</a></li>
+                            <li>Cứu hộ thuyền: <a href="tel:0916195222">0916 195 222</a>, <a href="tel:0915554886">0915
+                                    554 886</a></li>
+                            <li>Khu vực Quang Vinh: <a href="tel:0912258999">0912 258 999</a>, <a
+                                    href="tel:0963182183">0963 182 183</a></li>
+                            <li>Thuyền cứu hộ: <a href="tel:0962368977">0962 368 977</a></li>
+                        </ul>
+
+                        <h3>Số điện thoại đường dây nóng phòng chống thiên tai, cứu hộ, cứu nạn tỉnh Thái Nguyên:</h3>
+                       
+                        <ol>
+                            <li>UBND huyện Đồng Hỷ: <a href="tel:0979705747">0979705747</a></li>
+                            <li>UBND TP. Phổ Yên: <a href="tel:0915210808">0915210808</a></li>
+                            <li>UBND huyện Phú Bình: <a href="tel:0915548858">0915548858</a></li>
+                            <li>UBND huyện Phú Lương: <a href="tel:0989864002">0989864002</a></li>
+                            <li>UBND huyện Võ Nhai: <a href="tel:0914748858">0914748858</a></li>
+                            <li>UBND TP. Sông Công: <a href="tel:0912700905">0912700905</a></li>
+                            <li>UBND huyện Định Hóa: <a href="tel:0912708957">0912708957</a></li>
+                            <li>UBND TP. Thái Nguyên: <a href="tel:0974228333">0974228333</a></li>
+                            <li>UBND huyện Đại Từ: <a href="tel:0977904777">0977904777</a></li>
+                        </ol>
+
+                        <h3>THÔNG TIN CỨU TRỢ TP THÁI NGUYÊN</h3>
+                       
+                        <ul>
+                            <li>Địa Chỉ Tuấn Trưởng CA Phường Tân Long: <a href="tel:0912700808">0912700808</a></li>
+                            <li>Địa Chỉ Thao Trưởng CA Phường Quan Triều: <a href="tel:0913789578">0913789578</a></li>
+                            <li>Địa Chỉ Hà phó CA Phường Quang Vinh: <a href="tel:0911218812">0911218812</a></li>
+                            <li>Địa Chỉ Tuấn Trưởng CA Phường Quang Trung: <a href="tel:0985263579">0985263579</a></li>
+                            <li>Địa Chỉ Hạnh Bí Thư Phường Quang Trung: <a href="tel:0978123274">0978123274</a></li>
+                            <li>Địa Chỉ Lâm Trưởng CA Phường Tân Thịnh: <a href="tel:0968310252">0968310252</a></li>
+                            <li>Địa Chỉ Tám Trưởng CA Phường Thịnh Đán: <a href="tel:0987356250">0987356250</a></li>
+                            <li>Địa Chỉ Lam Phó CA Phường Túc Duyên: <a href="tel:0973828426">0973828426</a></li>
+                            <li>Địa Chỉ Hải Phó CA Phường Tích Lương: <a href="tel:0945011190">0945011190</a></li>
+                            <li>Địa Chỉ Hoàng Trưởng CA Phường Tân Thành: <a href="tel:0865091886">0865091886</a></li>
+                            <li>Địa Chỉ Nga Trưởng CA Phường Đồng Bẩm: <a href="tel:0982328559">0982328559</a></li>
+                            <li>Địa Chỉ Tuấn Trưởng CA Phường Trưng Vương: <a href="tel:0969133086">0969133086</a></li>
+                            <li>Địa Chỉ Tuệ Trưởng CA Phường Gia Sàng: <a href="tel:0919835766">0919835766</a></li>
+                            <li>Địa Chỉ Dũng Trưởng CA Phường Cam Giá: <a href="tel:0913081500">0913081500</a></li>
+                            <li>Địa Chỉ Hoàng Trưởng CA Phường Tân Thành: <a href="tel:0865091886">0865091886</a></li>
+                            <li>Địa Chỉ Huấn Trưởng CA Phường Trung Thành: <a href="tel:0974565628">0974565628</a></li>
+                            <li>Địa Chỉ Hoan Trưởng CA Phường Phú Xá: <a href="tel:0912700169">0912700169</a></li>
+                            <li>Địa Chỉ Thái Trưởng CA Phường PDP: <a href="tel:0916678584">0916678584</a></li>
+                            <li>Địa Chỉ Quân Trưởng CA xã Huống Thượng: <a href="tel:0973134999">0973134999</a></li>
+                            <li>Địa Chỉ Hiếu Trưởng CA xã Linh sơn: <a href="tel:0974471888">0974471888</a></li>
+                            <li>Địa Chỉ Tuyến Trưởng CA xã Tân Cương: <a href="tel:0334828468">0334828468</a></li>
+                            <li>Địa Chỉ Trung Trưởng CA xã Phúc Xuân: <a href="tel:0974971978">0974971978</a></li>
+                            <li>Địa Chỉ Khánh Trưởng CA xã Phúc Trìu: <a href="tel:0983746719">0983746719</a></li>
+                            <li>Địa Chỉ Huệ đội phó đội CSGT Công an TP Thái Nguyên: <a href="tel:0369004480">0369004480</a>
+                            </li>
+                            <li>Địa Chỉ Tuấn Trưởng CAP Hoàng Văn Thụ: <a href="tel:0983724026">0983724026</a></li>
+                            <li>Địa Chỉ Dũng Trưởng CAP Tân Lập: <a href="tel:0973738962">0973738962</a></li>
+                            <li>Địa Chỉ Trí Trưởng CA xã Đồng Liên: <a href="tel:0968132132">0968132132</a></li>
+                            <li>Địa Chỉ Tùng đội trưởng 113 - Công an tỉnh Thái Nguyên: <a
+                                    href="tel:0975387888">0975387888</a></li>
+                        </ul>
+                    </div>
+
+                   
+                    <div class="tab-pane fade" id="donate-tab-pane" role="tabpanel" aria-labelledby="donate-tab"
+                        tabindex="0">
+                        <p>🧡 TÀI KHOẢN ĐỂ BÀ CON CÔ BÁC CẢ NƯỚC THAM GIA ỦNG HỘ ĐỒNG BÀO</p>
+
+                        <h4>🏦 TÀI KHOẢN TẠI NGÂN HÀNG:</h4>
+
+                        <h5>1. TÀI KHOẢN VND TẠI VIETINBANK</h5>
+                        <p>1.1. Tài khoản VND</p>
+                        <p>Tên tài khoản: <strong>Ban Vận động cứu trợ Trung ương</strong></p>
+                        <p>Số tài khoản: CT1111 <button class="btn btn-sm btn-secondary" onclick="copy('CT1111')">Sao
+                                chép</button></p>
+                        <p>Tại Ngân hàng TMCP Công thương Việt Nam – Chi nhánh TP Hà Nội</p>
+
+                        <a href="https://img.vietqr.io/image/970415-CT1111-qr_only.png" download="qr-code.png">
+                            <img src="https://img.vietqr.io/image/970415-CT1111-qr_only.png" alt="donate"
+                                class="img-fluid" loading="lazy" width="200" height="200">
+                        </a>
+
+                        <p class="mt-3">1.2. Tài khoản USD</p>
+                        <p>Tên tài khoản: <strong>Ban Vận động cứu trợ Trung ương</strong></p>
+                        <p>Số tài khoản: 11063005111 <button class="btn btn-sm btn-secondary"
+                                onclick="copy('11063005111')">Sao chép</button></p>
+                        <p>Tại Ngân hàng TMCP Công thương Việt Nam – Chi nhánh TP Hà Nội</p>
+
+                        <h5>2. TÀI KHOẢN TẠI VIETCOMBANK</h5>
+                        <p>2.1. Tài khoản VND</p>
+                        <p>Tên Tài khoản: <strong>Mặt trận Tổ quốc Việt Nam - Ban Cứu trợ Trung ương</strong></p>
+                        <p>Số Tài khoản: 0011.00.1932418 <button class="btn btn-sm btn-secondary"
+                                onclick="copy('0011001932418')">Sao chép</button></p>
+                        <p>Tại Sở giao dịch Ngân hàng Thương mại cổ phần Ngoại thương Việt Nam.</p>
+
+                        <a href="https://img.vietqr.io/image/VCB-0011001932418-qr_only.png" download="qr-code.png">
+                            <img src="https://img.vietqr.io/image/VCB-0011001932418-qr_only.png" alt="donate"
+                                class="img-fluid" loading="lazy" width="200" height="200">
+                        </a>
+
+                        <p class="mt-3">2.2. Tài khoản USD</p>
+                        <p>Tên Tài khoản: <strong>Mặt trận Tổ quốc Việt Nam - Ban Cứu trợ Trung ương</strong></p>
+                        <p>Số Tài khoản: 001.1.37.193253.8 <button class="btn btn-sm btn-secondary"
+                                onclick="copy('0011371932538')">Sao chép</button></p>
+                        <p>Tại Sở giao dịch Ngân hàng Thương mại cổ phần Ngoại thương Việt Nam.</p>
+                        <p>SW Code: BFTVVNVX <button class="btn btn-sm btn-secondary" onclick="copy('BFTVVNVX')">Sao
+                                chép</button></p>
+
+                        <h4>🏦 TÀI KHOẢN VND TẠI KHO BẠC:</h4>
+                        <p>Tên Tài khoản: <strong>Văn phòng Uỷ ban Trung ương Mặt trận Tổ quốc Việt Nam</strong></p>
+                        <p>Số Tài khoản: 3713.0.1058784.00000 <button class="btn btn-sm btn-secondary"
+                                onclick="copy('37130105878400000')">Sao chép</button></p>
+                        <p>Mã đơn vị quan hệ ngân sách: 1058784 <button class="btn btn-sm btn-secondary"
+                                onclick="copy('1058784')">Sao chép</button></p>
+                        <p>Tại Sở giao dịch Kho bạc Nhà nước</p>
+
+                        <h4>🏦 TIẾP NHẬN ỦNG HỘ BẰNG TIỀN MẶT:</h4>
+                        <p>Phòng Kế hoạch-Tài chính (phòng 109, phòng 111) Văn phòng Cơ quan Ủy ban Trung ương MTTQ Việt
+                            Nam số 46 Tràng Thi - Hà Nội.</p>
+
+                        <p>Nguồn: <a
+                                href="https://www.facebook.com/thongtinchinhphu/posts/pfbid02cUHY23Gy72ULwkofLZwzmVreHv98aATDvfFKigucRBiaZmo9DXGVLRPwMnpP4Pqdl"
+                                target="_blank" rel="noopener noreferrer">Thông tin Chính phủ</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+        integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function copy(text) {
+            try {
+                navigator.clipboard.writeText(text)
+                alert('Đã sao chép!')
+            } catch (err) {
+                const textArea = document.createElement("textarea")
+                textArea.value = text
+                document.body.appendChild(textArea)
+                textArea.focus()
+                textArea.select()
+                document.execCommand('copy')
+                document.body.removeChild(textArea)
+            }
+        }
+    </script>
+    
+</body>
+
+</html>
